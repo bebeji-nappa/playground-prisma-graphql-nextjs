@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db:
+    container_name: db
+    ports:
+      - '3306:3306'
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: prisma_graphql
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - ./db/data:/var/lib/mysql
