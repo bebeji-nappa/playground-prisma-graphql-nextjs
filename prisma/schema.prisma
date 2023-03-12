@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://root:MnMr0043@127.0.0.1:3306/prisma_graphql"
+  url      = env("DATABASE_URL")
 }
 
 // DB Schema 
